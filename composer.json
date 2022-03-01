@@ -1,0 +1,34 @@
+{
+    "name": "soyhuce/empty-collection",
+    "description": "Empty laravel collections correctly understood by PHPStan",
+    "type": "library",
+    "keywords": ["laravel", "collection", "phpstan"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bastien Philippe",
+            "email": "bastien.philippe@soyhuce.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/database": "^9.0",
+        "illuminate/support": "^9.0",
+        "phpstan/phpstan": "^1.4.6"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Soyhuce\\EmptyCollection\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "scripts": {
+        "cs": "vendor/bin/php-cs-fixer fix",
+        "test": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=phpstan.types.neon --level=max tests"
+    }
+}

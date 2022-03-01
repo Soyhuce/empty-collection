@@ -1,0 +1,7 @@
+services:
+  - class: Soyhuce\EmptyCollection\CollectionReturnTypeExtension
+    tags:
+      - phpstan.broker.dynamicFunctionReturnTypeExtension
+  - class: Soyhuce\EmptyCollection\EloquentCollectionReturnTypeExtension
+    tags:
+      - phpstan.broker.dynamicFunctionReturnTypeExtension
