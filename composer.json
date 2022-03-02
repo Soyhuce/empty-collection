@@ -32,6 +32,6 @@
     },
     "scripts": {
         "cs": "vendor/bin/php-cs-fixer fix",
-        "test": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=phpstan.types.neon --level=max tests"
+        "test": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=phpstan.types.neon"
     }
 }
