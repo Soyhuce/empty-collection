@@ -68,7 +68,7 @@ Exemples:
 empty_collection('int', 'int'); // Illuminate\Support\Collection<int, int>
 empty_collection('int', 'string'); // Illuminate\Support\Collection<int, string>
 empty_collection('string', 'array<string, bool>'); // Illuminate\Support\Collection<string, array<string, bool>>
-empty_collection('string', Item::class); // Illuminate\Support\Collection<int, App\Service\Item>
+empty_collection('string', Item::class); // Illuminate\Support\Collection<string, App\Service\Item>
 ```
 
 #### `empty_eloquent_collection(string $keyType, string $valueType) : \Illuminate\Database\Eloquent\Collection`
@@ -79,7 +79,7 @@ empty_collection('string', Item::class); // Illuminate\Support\Collection<int, A
 Exemples:
 ```php
 empty_eloquent_collection('int', User::class); // Illuminate\Database\Eloquent\Collection<int, App\Models\User>
-empty_eloquent_collection('string', User::class); // Illuminate\Database\Eloquent\Collection<int, App\Models\User>
+empty_eloquent_collection('string', User::class); // Illuminate\Database\Eloquent\Collection<string, App\Models\User>
 ```
 
 ## Testing
