@@ -33,4 +33,4 @@ jobs:
             composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
 
       - name: Execute type checking
-        run: vendor/bin/phpstan --configuration="phpstan.types.neon.dist"
+        run: vendor/bin/phpstan --configuration="phpstan.types.neon"
