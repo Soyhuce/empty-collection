@@ -1,8 +1,8 @@
 {
     "name": "soyhuce/empty-collection",
-    "description": "Empty laravel collections correctly understood by PHPStan",
+    "description": "Empty Laravel collections correctly understood by PHPStan",
     "type": "library",
-    "keywords": ["laravel", "collection", "phpstan"],
+    "keywords": ["Laravel", "collection", "PHPStan"],
     "license": "MIT",
     "authors": [
         {
