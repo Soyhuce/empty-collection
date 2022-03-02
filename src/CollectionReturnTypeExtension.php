@@ -5,25 +5,16 @@ namespace Soyhuce\EmptyCollection;
 use Illuminate\Support\Collection;
 use PhpParser\Node\Expr;
 use PhpParser\Node\Expr\ClassConstFetch;
-use PhpParser\Node\Expr\FuncCall;
 use PhpParser\Node\Scalar\String_;
 use PHPStan\Analyser\NameScope;
-use PHPStan\Analyser\Scope;
 use PHPStan\PhpDoc\TypeNodeResolver;
-use PHPStan\PhpDoc\TypeNodeResolverAwareExtension;
-use PHPStan\PhpDocParser\Ast\Type\UnionTypeNode;
 use PHPStan\PhpDocParser\Lexer\Lexer;
 use PHPStan\PhpDocParser\Parser\ConstExprParser;
 use PHPStan\PhpDocParser\Parser\TokenIterator;
 use PHPStan\PhpDocParser\Parser\TypeParser;
 use PHPStan\Reflection\FunctionReflection;
-use PHPStan\Type\BenevolentUnionType;
-use PHPStan\Type\DynamicFunctionReturnTypeExtension;
-use PHPStan\Type\Generic\GenericObjectType;
-use PHPStan\Type\IntegerType;
 use PHPStan\Type\MixedType;
 use PHPStan\Type\ObjectType;
-use PHPStan\Type\StringType;
 use PHPStan\Type\Type;
 
 class CollectionReturnTypeExtension extends AbstractCollectionReturnTypeExtension

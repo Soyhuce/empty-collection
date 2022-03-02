@@ -2,12 +2,10 @@
 
 namespace Soyhuce\EmptyCollection;
 
-use Illuminate\Support\Collection;
 use PhpParser\Node\Expr;
 use PhpParser\Node\Expr\FuncCall;
 use PhpParser\Node\Scalar\String_;
 use PHPStan\Analyser\Scope;
-use PHPStan\PhpDoc\TypeNodeResolver;
 use PHPStan\Reflection\FunctionReflection;
 use PHPStan\Type\BenevolentUnionType;
 use PHPStan\Type\DynamicFunctionReturnTypeExtension;
@@ -21,7 +19,7 @@ abstract class AbstractCollectionReturnTypeExtension implements DynamicFunctionR
     public function getTypeFromFunctionCall(
         FunctionReflection $functionReflection,
         FuncCall $functionCall,
-        Scope $scope
+        Scope $scope,
     ): Type {
         $keyType = $this->determineKeyType($functionCall->getArgs()[0]->value) ?? $this->defaultKeyType();
         $valueType = $this->determineValueType($functionCall->getArgs()[1]->value) ?? $this->defaultValueType();
@@ -37,13 +35,11 @@ abstract class AbstractCollectionReturnTypeExtension implements DynamicFunctionR
             return null;
         }
 
-        if ($value->value === "string") {
-            return new StringType();
-        } elseif ($value->value === "int") {
-            return new IntegerType();
-        }
-
-        return null;
+        return match ($value->value) {
+            'int' => new IntegerType(),
+            'string' => new StringType(),
+            default => null,
+        };
     }
 
     protected function defaultKeyType(): Type
@@ -52,5 +48,6 @@ abstract class AbstractCollectionReturnTypeExtension implements DynamicFunctionR
     }
 
     abstract protected function determineValueType(Expr $value): ?Type;
+
     abstract protected function defaultValueType(): Type;
 }
