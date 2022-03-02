@@ -3,7 +3,7 @@
 # Empty Laravel collections correctly understood by PHPStan
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/soyhuce/empty-collection.svg?style=flat-square)](https://packagist.org/packages/soyhuce/empty-collection)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/soyhuce/empty-collection/run-tests?label=tests)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/soyhuce/empty-collection/tests?label=tests)
 [![Total Downloads](https://img.shields.io/packagist/dt/soyhuce/empty-collection.svg?style=flat-square)](https://packagist.org/packages/soyhuce/empty-collection)
 
 
